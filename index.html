@@ -146,6 +146,8 @@
                 <!-- Custom Logo - Larger -->
                 <img src="1.svg" alt="Accelar Logo" class="h-10 w-auto">
             </a>
+
+            <!-- Desktop Menu -->
             <div class="hidden md:block">
                 <ul class="flex space-x-8 text-[15px] font-medium text-slate-300 items-center">
                     <li><a href="#het-probleem" class="hover:text-white transition-colors">Het probleem</a></li>
@@ -155,6 +157,24 @@
                     <li><a href="#contact" class="text-gradient hover:opacity-80 transition-opacity font-semibold">Contact</a></li>
                 </ul>
             </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-slate-300 hover:text-white transition-colors" aria-label="Open menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-[#0A0E27]/95 backdrop-blur-md">
+            <ul class="flex flex-col space-y-1 px-6 py-4 text-[15px] font-medium text-slate-300">
+                <li><a href="#het-probleem" class="block py-2 hover:text-white transition-colors mobile-menu-link">Het probleem</a></li>
+                <li><a href="#waarom-accelar" class="block py-2 hover:text-white transition-colors mobile-menu-link">Waarom Accelar?</a></li>
+                <li><a href="#werkwijze" class="block py-2 hover:text-white transition-colors mobile-menu-link">Werkwijze</a></li>
+                <li><a href="#over-mij" class="block py-2 hover:text-white transition-colors mobile-menu-link">Over</a></li>
+                <li><a href="#contact" class="block py-2 text-gradient hover:opacity-80 transition-opacity font-semibold mobile-menu-link">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -429,7 +449,7 @@
             <h2 class="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-2">
                 Klaar om te ontdekken waar AI<br>jouw bedrijf <span class="text-gradient">versnelt</span>?
             </h2>
-            <p class="text-lg text-slate-400 mb-12">
+            <p class="text-lg text-slate-400 text-lg">
                 Plan direct een vrijblijvende kennismaking in. We bespreken je huidige situatie en de mogelijkheden voor jouw bedrijf.
             </p>
 
@@ -449,9 +469,9 @@
             <div class="flex flex-col md:flex-row justify-between items-start gap-6 mb-2">
                 <!-- Brand -->
                 <div class="max-w-xs">
-                    <div class="flex items-center space-x-2 mb-2">
+                    <a href="#" class="flex items-center space-x-2 mb-2 hover:opacity-80 transition-opacity">
                         <img src="1.svg" alt="Accelar Logo" class="h-6 w-auto">
-                    </div>
+                    </a>
                     <p class="text-slate-400 text-xs leading-relaxed">
                         AI-transformatiepartner voor het Nederlandse MKB.
                     </p>
@@ -496,7 +516,7 @@
 
             <div class="border-t border-white/5 pt-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-slate-600">
                 <p>© 2025 Accelar. Alle rechten voorbehouden.</p>
-                <a href="#" class="hover:text-slate-400 transition-colors">Privacy</a>
+                <a href="privacy.html" class="hover:text-slate-400 transition-colors">Privacy</a>
             </div>
         </div>
     </footer>
@@ -529,6 +549,22 @@
 
         // Initialize first step
         cycleSteps();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking a link
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
     </script>
 
 </body></html>
