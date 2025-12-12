@@ -22,21 +22,10 @@
             overflow-x: hidden;
         }
 
-        /* Snap Scrolling - Snaps through all main sections including contact */
-        html {
-            scroll-snap-type: y proximity;
-            scroll-padding-top: 0px;
-        }
-
         @media (prefers-reduced-motion: no-preference) {
             html {
                 scroll-behavior: smooth;
             }
-        }
-
-        .snap-section {
-            scroll-snap-align: start;
-            min-height: 100vh;
         }
 
         /* Custom Scrollbar */
@@ -170,7 +159,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="snap-section flex overflow-hidden pt-20 relative items-center justify-center">
+    <section class="min-h-screen flex overflow-hidden pt-20 relative items-center justify-center">
         <!-- Background Gradient Glow -->
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#40E0D0] rounded-full blur-[120px] opacity-[0.08] pointer-events-none"></div>
 
@@ -198,7 +187,7 @@
     </section>
 
     <!-- Problem Section - CHAOS LAYOUT -->
-    <section id="het-probleem" class="snap-section py-20 bg-[#0A0E27] flex flex-col justify-center relative overflow-hidden">
+    <section id="het-probleem" class="min-h-screen py-20 bg-[#0A0E27] flex flex-col justify-center relative overflow-hidden">
         <!-- Subtle Background Atmosphere -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-slate-800/5 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -274,7 +263,7 @@
     </section>
 
     <!-- Differentiation (USP) -->
-    <section id="waarom-accelar" class="snap-section py-24 bg-[#0A0E27] relative overflow-hidden flex items-center justify-center">
+    <section id="waarom-accelar" class="min-h-screen py-24 bg-[#0A0E27] relative overflow-hidden flex items-center justify-center">
         <!-- Decorative line -->
         <div class="absolute left-1/2 top-0 h-full w-[1px] bg-gradient-to-b from-transparent via-white/10 to-transparent -translate-x-1/2 hidden lg:block pointer-events-none"></div>
 
@@ -327,7 +316,7 @@
     </section>
 
     <!-- Process Section -->
-    <section id="werkwijze" class="snap-section py-24 bg-[#0A0E27] flex items-center justify-center">
+    <section id="werkwijze" class="min-h-screen py-24 bg-[#0A0E27] flex items-center justify-center">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-2">Van kennismaking naar <span class="text-gradient">resultaat</span>.</h2>
@@ -382,7 +371,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="over-mij" class="snap-section py-24 bg-[#0A0E27] flex items-center justify-center relative overflow-hidden">
+    <section id="over-mij" class="min-h-screen py-24 bg-[#0A0E27] flex items-center justify-center relative overflow-hidden">
         <!-- Subtle Background Glow -->
         <div class="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-[#40E0D0] rounded-full blur-[140px] opacity-[0.04] pointer-events-none"></div>
 
@@ -434,8 +423,8 @@
         </div>
     </section>
 
-    <!-- CTA / Contact - Snaps to header, then free scroll -->
-    <section id="contact" class="snap-section py-20 bg-[#0A0E27] flex flex-col justify-start pt-32">
+    <!-- CTA / Contact -->
+    <section id="contact" class="min-h-screen py-20 bg-[#0A0E27] flex flex-col justify-start pt-32">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-2">
                 Klaar om te ontdekken waar AI<br>jouw bedrijf <span class="text-gradient">versnelt</span>?
