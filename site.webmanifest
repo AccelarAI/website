@@ -1,0 +1,25 @@
+{
+  "name": "Accelar | Strategische AI-partner voor het Nederlandse MKB",
+  "short_name": "Accelar",
+  "description": "AI-transformatiepartner voor het Nederlandse MKB",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0A0E27",
+  "background_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
